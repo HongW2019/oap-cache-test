@@ -1,13 +1,13 @@
 # User Guide
 
-* [Prerequisites](#Prerequisites)
-* [Getting Started](#Getting-Started)
-* [Configuration for YARN Cluster Mode](#Configuration-for-YARN-Cluster-Mode)
-* [Configuration for Spark Standalone Mode](#Configuration-for-Spark-Standalone-Mode)
-* [Working with SQL Index](#Working-with-SQL-Index)
-* [Working with SQL Data Source Cache](#Working-with-SQL-Data-Source-Cache)
-* [Run TPC-DS Benchmark](#Run-TPC-DS-Benchmark)
-* [Advanced Configuration](#Advanced-Configuration)
+* [Prerequisites](#prerequisites)
+* [Getting Started](#getting-started)
+* [Configuration for YARN Cluster Mode](#configuration-for-yarn-cluster-mode)
+* [Configuration for Spark Standalone Mode](#configuration-for-spark-standalone-mode)
+* [Working with SQL Index](#working-with-sql-index)
+* [Working with SQL Data Source Cache](#working-with-sql-data-source-cache)
+* [Run TPC-DS Benchmark](#run-tpc-ds-benchmark)
+* [Advanced Configuration](#advanced-configuration)
 
 
 ## Prerequisites
@@ -162,7 +162,7 @@ Data Source Cache can provide input data cache functionality to the executor. Wh
 
    Launch Spark Thrift Server, and use the Beeline command line tool to connect to the Thrift Server to execute DDL or DML operations. The data cache will automatically take effect for Parquet or ORC file sources. 
    
-   The rest of this section will show you how to do a quick verification of cache functionality. It will reuse the database metastore created in the [Working with SQL Index](#Working-with-SQL-Index) section, which creates the `oap_test` table definition. In production, Spark Thrift Server will have its own metastore database directory or metastore service and use DDL's through Beeline for creating your tables.
+   The rest of this section will show you how to do a quick verification of cache functionality. It will reuse the database metastore created in the [Working with SQL Index](#working-with-sql-index) section, which creates the `oap_test` table definition. In production, Spark Thrift Server will have its own metastore database directory or metastore service and use DDL's through Beeline for creating your tables.
 
    When you run ```spark-shell``` to create the `oap_test` table, `metastore_db` will be created in the directory where you ran '$SPARK_HOME/bin/spark-shell'. ***Go to that directory*** and execute the following command to launch Thrift JDBC server and run queries.
 
